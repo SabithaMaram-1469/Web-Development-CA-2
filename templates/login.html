@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .cusotm-form{
+        width: 500px;
+    /* background: #ffffff73; */
+    float: right;
+    text-align: left;
+    }
+</style>
+<form method="POST" class="cusotm-form">
+    {# This hidden_tag is a CSRF security feature. #}</br>
+    {{ form.hidden_tag() }}</br>
+    {{ form.email.label }} {{ form.email() }}</br>
+    {{ form.password.label }}{{ form.password() }}</br>
+    {{ form.submit() }}
+</form>
+{% endblock %}

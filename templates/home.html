@@ -1,0 +1,19 @@
+<style>
+  .login-text{
+        font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+      }
+</style>
+{% extends "base.html" %}
+{% block content %}
+<div class="">
+  {% if current_user.is_authenticated %}
+    <p>Hi </p>
+  {% else %}
+    <p class="login-text">Please login or register!</p>
+  {% endif %}
+</div>
+
+{% endblock %}
